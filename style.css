@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --animationTime:1.5s;
+    --bg:#f8f8f8;
+    --primaryColor:#141414;
+    --secondColor:#EF4128;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--primaryColor);
+}
+html{
+    scroll-behavior: smooth;
+}
+.negativeSpace{
+    padding: 0 6vw;
+}
+h2{
+    text-transform: uppercase;
+}
+nav{
+    height: 10vh;
+    border-bottom: 2px solid var(--primaryColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--primaryColor);
+    font-weight: 600;
+}
+#iconHome{
+    height: 2rem;
+}
+#ellipse2{
+    transition: .2s;
+}
+#iconHome:hover #ellipse2{
+transform: translateY(10px);
+}
+::selection{
+    background-color: var(--primaryColor);
+    color: var(--secondColor);
+}
+  .cls-1 {
+    fill: none;
+  }
+
+  .cls-2 {
+    clip-path: url(#clip-path);
+  }
+
+  .cls-3 {
+    fill: #141414;
+  }
+
+  .myName{
+    display: grid;
+    gap: .5rem;
+    overflow: hidden;
+    height: 12vw;
+    min-height: 13rem;
+  }
+
+  .myName h2{
+      font-weight: 400;
+  }
+
+/*animation myName=========================*/
+svg{
+    max-width: 40rem;
+}
+
+#b{
+    animation: b var(--animationTime) forwards ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+
+    transform: translateY(7rem);
+}
+
+
+@keyframes b{
+    from{
+        transform: translateY(7rem);
+    }
+    to{
+        transform: translateY(-6.6rem);
+    }
+}
+
+#r{
+    animation: r var(--animationTime) .2s forwards ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translateY(7rem);
+}
+@keyframes r{
+    from{
+        transform: translateY(7rem);
+    }
+    to{
+        transform: translateY(-6.6rem);
+    }
+}
+
+#u{
+    animation: u var(--animationTime) .4s forwards ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translateY(7rem);
+}
+@keyframes u{
+    from{
+        transform: translateY(7rem);
+    }
+    to{
+        transform: translateY(-6.6rem);
+    }
+}
+
+#n{
+    animation: n var(--animationTime) .6s forwards ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translateY(7rem);
+}
+@keyframes n{
+    from{
+        transform: translateY(7rem);
+    }
+    to{
+        transform: translateY(-6.6rem);
+    }
+}
+
+#o{
+    animation: o var(--animationTime) .8s forwards ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: translateY(7rem);
+}
+@keyframes o{
+    from{
+        transform: translateY(7rem);
+    }
+    to{
+        transform: translateY(-6rem);
+    }
+}
+.containerImg{
+    width: 100%;
+    height: 25rem;
+    background-color:var(--secondColor);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.containerImg img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: .5s;
+    filter: contrast(100%);
+}
+.containerImg:hover img{
+    height: 110%;
+    filter: contrast(130%);
+}
+.mainInform{
+    width: 100%;
+}
+.mainInform h1{
+    font-size:4vw;
+    font-weight:400;
+}
+.containerAbout{
+  margin-top: 5rem;
+  background-color:#ffffff;
+  padding: 2rem 6vw;
+}
+.containerAbout p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.containerSkills,
+.containerProject,
+.containerContact{
+    padding: 2rem 6vw;
+}
+.containerXp{
+    
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+.cardXp{
+    display: grid;
+    gap: 2rem;
+}
+.illustrationXp{
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+}
+.illustrationXp svg{
+    width: max(16rem, 30vw);
+}
+.borderProgress{
+    width: 100%;
+    border: 2px solid #E0E0E0;
+    border-radius: 1rem;
+}
+.progressBar{
+    height: .5rem;
+    background: var(--secondColor);
+    border-radius: 1rem;
+}
+#progress-html{
+    width: 90%;
+}
+#progress-css{
+    width: 90%;
+}
+#progress-vue{
+    width: 80%;
+}
+#progress-react{
+    width: 50%;
+}
+#progress-xd{
+    width: 80%;
+}
+#progress-figma{
+    width: 70%;
+}
+#progress-illustrator{
+    width: 95%;
+}
+#progress-photoshop{
+    width: 30%;
+}
+.projects{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.projectCard{
+    width: fit-content;
+}
+.projectCard-down{
+    margin-top: 6rem;
+}
+.projectImg{
+    overflow: hidden;
+    width: max(10rem, 40vw);
+    height: max(10rem, 40vw);
+    background-color: var(--secondColor);
+}
+.projectImg img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+    transition: 1s;
+    opacity: .6;
+}
+.projectCard:hover img{
+    height: 120%;
+    filter: grayscale(0);
+    opacity: 1;
+}
+.projectInform{
+    border-top: 2px solid var(--primaryColor);
+    margin-top: 2rem;
+    
+}
+.containerProject h2,
+.containerContact h2{
+    margin-bottom:1rem;
+}
+.containerContact{
+    background-color: #FFFFFF;
+    height: 40vh;
+}
+/* animation XP======================================= */
+#nuvem1{
+    animation: nuvem1 var(--animationTime) infinite cubic-bezier(0.45, 0.21, 0.54, 0.75) alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes nuvem1{
+    from{
+        transform: translateX(0rem);
+    }
+    to{
+        transform: translateX(1rem);
+    }
+}
+
+#nuvem2{
+    animation: nuvem2 var(--animationTime) .5s infinite cubic-bezier(0.45, 0.21, 0.54, 0.75) alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+@keyframes nuvem2{
+    from{
+        transform: translateX(0rem);
+    }
+    to{
+        transform: translateX(-1rem);
+    }
+}
+#folha1{
+    animation: folha var(--animationTime) 1s infinite ease-in-out alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    transform: rotateZ(0deg);
+}
+
+#folha2{
+    animation: folha var(--animationTime) 2s infinite ease-in-out alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    transform: rotateZ(0deg);
+}
+
+#folha3{
+    animation: folha var(--animationTime) 2s infinite ease-in-out alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    transform: rotateZ(0deg);
+}
+#folha4{
+    animation: folha var(--animationTime) 1s infinite ease-in-out alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    transform: rotateZ(0deg);
+}
+@keyframes folha{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(8deg);;
+    }
+}
+.links{
+    display: flex;
+    gap: 1rem;
+    height: 50%;
+}
+.links i{
+    font-size: 3rem;
+    transition: .2s;
+}
+.links i:hover{
+    color: var(--secondColor);
+}
+.up{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.up a{
+    background-color: var(--secondColor);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transition: 1s;
+}
+
+/* responsive====================== */
+@media(max-width: 768px){
+    .myName{
+        height: 33vw;
+        min-height: 7rem;
+    }
+    .mainInform{
+        text-align: center;
+    }
+    .mainInform h1{
+        font-size: 2rem;
+    }
+    .containerXp{
+        grid-template: .5fr 1fr / 1fr; 
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin: 2rem 0;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    .projectImg{
+        overflow: hidden;
+        width: max(calc(300px - 6vw), 60vw);
+        
+        height: max(calc(300px - 6vw), 60vw);
+        
+        background-color: var(--secondColor);
+    }
+    .projectCard-down{
+        margin-top: 0;
+    }
+    .illustrationXp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .up{
+        align-items: end;
+    }
+    
+}
